@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-snowflake-{{ version }}.tar.gz
-  sha256: 6d73870b22242d15a605bea0110df85af669270d3860e3b7bec34c138d5bab96
+  sha256: 5be7fe298d79666d9f29c5fcb9b96b37d873847304201dd2e37f6c9be751ba44
 
 build:
   number: 0
@@ -17,17 +17,14 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - pip
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
-    - azure-core >=1.10.0
-    - azure-storage-blob
-    - azure-storage-common
     - python >=3.6
-    - snowflake-connector-python >=2.3.8
+    - apache-airflow >=2.0.0
+    - snowflake-connector-python >=2.4.1
     - snowflake-sqlalchemy >=1.1.0
 
 test:
