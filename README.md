@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-snowflake` from the `conda-forge` channel c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-snowflake` can be installed with:
