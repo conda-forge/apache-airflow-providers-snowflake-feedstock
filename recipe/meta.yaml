@@ -23,7 +23,7 @@ requirements:
     - wheel
   run:
     - python >=3.6
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - snowflake-connector-python >=2.4.1
     - snowflake-sqlalchemy >=1.1.0
 
