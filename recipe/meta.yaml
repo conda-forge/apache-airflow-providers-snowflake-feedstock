@@ -25,7 +25,10 @@ requirements:
     - python >=3.6
     - apache-airflow >=2.1.0
     - snowflake-connector-python >=2.4.1
-    - snowflake-sqlalchemy >=1.1.0
+    # temporary workaround to deal with the incorrect contraints in
+    # https://github.com/conda-forge/snowflake-sqlalchemy-feedstock/pull/7
+    - snowflake-sqlalchemy >=1.1.0,<1.3.1
+    #- snowflake-sqlalchemy >=1.1.0
 
 test:
   imports:
