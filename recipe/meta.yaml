@@ -11,7 +11,7 @@ source:
   sha256: b1f29280f8e917cce7f8898ff7c5fdc673f9ec394f4ba9abfb23be1226e07727
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -25,10 +25,7 @@ requirements:
     - python >=3.6
     - apache-airflow >=2.1.0
     - snowflake-connector-python >=2.4.1
-    # temporary workaround to deal with the incorrect contraints in
-    # https://github.com/conda-forge/snowflake-sqlalchemy-feedstock/pull/7
-    - snowflake-sqlalchemy >=1.1.0,<1.3.1
-    #- snowflake-sqlalchemy >=1.1.0
+    - snowflake-sqlalchemy >=1.1.0
 
 test:
   imports:
