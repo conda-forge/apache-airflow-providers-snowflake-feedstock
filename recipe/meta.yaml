@@ -1,7 +1,6 @@
 {% set name = "apache-airflow-providers-snowflake" %}
 {% set version = "2.6.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,9 +10,9 @@ source:
   sha256: ee0d79b63f7d8839a1a8828840acb89e7d528e44237a425c4d1f0a90bb6b55d8
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -23,8 +22,8 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.1.0
-    - snowflake-connector-python >=2.4.1,<2.7.2
-    - snowflake-sqlalchemy >=1.1.0,!=1.2.5
+    - snowflake-connector-python >=2.4.1
+    - snowflake-sqlalchemy >=1.1.0
 
 test:
   imports:
@@ -37,9 +36,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Snowflake for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-snowflake package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-snowflake/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
