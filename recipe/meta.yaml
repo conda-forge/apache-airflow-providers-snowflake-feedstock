@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "4.3.1" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-snowflake-{{ version }}.tar.gz
-  sha256: f3990feecaea644fd0f04db2527665ae57ca84a8781e0910550f26902362c062
+  sha256: bc9f960eb76e58b31ad65d19325a964def543b62e0d7025a66f13980f577c3b5
 
 build:
   noarch: python
