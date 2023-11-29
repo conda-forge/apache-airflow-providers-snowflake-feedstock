@@ -28,7 +28,7 @@ requirements:
 
 test:
   imports:
-    - apache_airflow_providers_snowflake
+    - airflow.providers.snowflake
   commands:
     - pip check
   requires:
