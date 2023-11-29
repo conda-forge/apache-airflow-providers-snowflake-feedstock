@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
   sha256: 4751dab59ac76c431e039142599746d61aed13f2462cf10e50b0a4dc8f000452
 
 build:
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -28,8 +28,7 @@ requirements:
 
 test:
   imports:
-    - airflow.providers.snowflake
-    - airflow.providers.snowflake.hooks
+    - apache_airflow_providers_snowflake
   commands:
     - pip check
   requires:
@@ -37,11 +36,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-snowflake package
+  summary: Provider package apache-airflow-providers-snowflake for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/snowflake/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-snowflake/stable/index.html
   dev_url: https://github.com/apache/airflow/
