@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "5.4.0" %}
+{% set version = "5.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 6a559f3b9706bdc1f2b63127c0384f78f101a806f069c6555a858e5932cdf380
+  sha256: f914043c2de1e1c127f9a62d9811fad6d942a1ea8be976b2a5ec36dd82daf5a4
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow-providers-common-sql >=1.10.0
-    - apache-airflow >=2.6.0
+    - apache-airflow >=2.7.0
     - snowflake-connector-python >=2.7.8
     - snowflake-sqlalchemy >=1.1.0
 
