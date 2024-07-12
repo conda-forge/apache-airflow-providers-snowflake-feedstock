@@ -23,6 +23,8 @@ requirements:
     - python >=3.8
     - apache-airflow-providers-common-sql >=1.10.0
     - apache-airflow >=2.7.0
+    # use the more constrained dependencies to stay noarch: python
+    # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
     - pandas >=2.1.2,<2.2
     - pyarrow >=14.0.1
     - snowflake-connector-python >=3.7.1
