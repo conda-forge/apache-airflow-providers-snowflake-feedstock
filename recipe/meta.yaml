@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "5.6.0" %}
+{% set version = "5.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 1a4aad355de11bd581e2d597f095b6848fc8ce632d16a9aa63975b1c0abf5341
+  sha256: 6b64e62f08c70fd06b502114e738f0277b94f91e848701f0acf76fd4cb0a6c44
 
 build:
   noarch: python
@@ -20,8 +20,9 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.1.0
     - python >=3.8
-    - apache-airflow-providers-common-sql >=1.10.0
+    - apache-airflow-providers-common-sql >=1.14.1
     - apache-airflow >=2.7.0
     # use the more constrained dependencies to stay noarch: python
     # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
