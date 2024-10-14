@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "5.7.1" %}
+{% set version = "5.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 970de9ec72cb3bf0a746bce192289c0cdf5194aa60e7af2f4c85844134748d65
+  sha256: 48c25cf44fca42dd53af9c3c8993d72021b6e7a8208013fdd94c2d8d1dd7d31b
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - snowflake-snowpark-python >=1.17.0
     - python >=3.8,<4.dev0
     - apache-airflow-providers-common-compat >=1.1.0
     - apache-airflow-providers-common-sql >=1.14.1
