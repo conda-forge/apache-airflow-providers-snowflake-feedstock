@@ -16,20 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
+    - python >=3.9,<4.dev0
     - flit-core >=3.2,<4
     - pip
   run:
-    - snowflake-snowpark-python >=1.17.0
-    - python >=3.8,<4.dev0
+    - python >=3.9,<4.dev0
     - apache-airflow-providers-common-compat >=1.1.0
     - apache-airflow-providers-common-sql >=1.14.1
     - apache-airflow >=2.8.0
     # use the more constrained dependencies to stay noarch: python
-    # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
     - pandas >=2.1.2,<2.2
     - pyarrow >=14.0.1
     - snowflake-connector-python >=3.7.1
+    - snowflake-snowpark-python >=1.17.0
     - snowflake-sqlalchemy >=1.4.0
 
 test:
