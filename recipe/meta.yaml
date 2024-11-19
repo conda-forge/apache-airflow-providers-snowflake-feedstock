@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "5.7.1" %}
+{% set version = "5.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 970de9ec72cb3bf0a746bce192289c0cdf5194aa60e7af2f4c85844134748d65
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
+  sha256: bd2bd8680f387cfae8e23149691bd53d9cb061fb966b3767cac6aa43962c8ee7
 
 build:
   noarch: python
@@ -16,19 +16,20 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.8,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow-providers-common-compat >=1.1.0
-    - apache-airflow-providers-common-sql >=1.14.1
+    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     # use the more constrained dependencies to stay noarch: python
     # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
     - pandas >=2.1.2,<2.2
     - pyarrow >=14.0.1
     - snowflake-connector-python >=3.7.1
+    - snowflake-snowpark-python >=1.17.0
     - snowflake-sqlalchemy >=1.4.0
 
 test:
@@ -37,6 +38,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
