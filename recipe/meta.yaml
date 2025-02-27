@@ -30,7 +30,8 @@ requirements:
     - pyarrow >=14.0.1
     - snowflake-connector-python >=3.7.1
     - snowflake-sqlalchemy >=1.4.0
-    - snowflake-snowpark-python >=1.17.0  # [py<312]
+    # including for all python to stay noarch: python
+    - snowflake-snowpark-python >=1.17.0
 
 test:
   imports:
