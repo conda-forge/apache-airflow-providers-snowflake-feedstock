@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "6.2.2" %}
+{% set version = "6.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 04ce97a87c1264b4b83dad3e1d391c5d704a4a37eb2113502d53ff5acf45c0da
+  sha256: 4de09fd2d0eb95bd0f1acd66360eeeeec9fd5938de05935a17d0ad02bf2a6ef1
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.9.0
+    - apache-airflow >=2.10.0
     - apache-airflow-providers-common-compat >=1.6.0
-    - apache-airflow-providers-common-sql >=1.20.0
+    - apache-airflow-providers-common-sql >=1.21.0
     # use the more constrained dependencies to stay noarch: python
     # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
     - pandas >=2.1.2,<2.2
