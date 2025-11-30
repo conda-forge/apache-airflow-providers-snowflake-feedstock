@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
-{% set version = "6.6.1" %}
+{% set version = "6.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_snowflake-{{ version }}.tar.gz
-  sha256: 240c7d8e60a0a1aab24b50dd2288d22d2e5993447b16017c910301756c212c55
+  sha256: 74b8b8255a85a4ebf65bd8752ae3192e7e6639a4ed02d7e130c8259b95d7b150
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.8.0
     - apache-airflow-providers-common-sql >=1.27.5
     # use the more constrained dependencies to stay noarch: python
@@ -49,10 +49,10 @@ about:
   summary: Provider package apache-airflow-providers-snowflake for Apache Airflow
   license: Apache-2.0
   license_family: Apache
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
-    
+
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-snowflake/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
