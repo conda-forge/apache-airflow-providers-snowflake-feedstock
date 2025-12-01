@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-snowflake" %}
 {% set version = "6.7.0" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -25,14 +24,14 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.8.0
     - apache-airflow-providers-common-sql >=1.27.5
-    # use the more constrained dependencies to stay noarch: python
-    # https://github.com/apache/airflow/blob/providers-snowflake/{{ version }}/generated/provider_dependencies.json
-    - pandas >=2.1.2
-    - pyarrow >=16.1.0
+    # more restrictive for python >=3.13
+    - pandas >=2.2.3
+    # more restrictive for python >=3.13
+    - pyarrow >=18.0.0
     - snowflake-connector-python >=3.16.0
     - snowflake-sqlalchemy >=1.7.0
-    # including for all python to stay noarch: python
-    - snowflake-snowpark-python >=1.17.0,<9999
+    # more restrictive for python >=3.12
+    - snowflake-snowpark-python >=1.27.0,<9999
     - setuptools >=80.0.0,<9999
 
 test:
@@ -45,14 +44,13 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-snowflake for Apache Airflow
   license: Apache-2.0
-  license_family: Apache
   license_file:
     - LICENSE
     - NOTICE
-
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-snowflake/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
