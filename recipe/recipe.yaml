@@ -38,7 +38,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.snowflake
+      - airflow.providers.snowflake
       pip_check: true
       python_version: ${{ python_min }}.*
 
