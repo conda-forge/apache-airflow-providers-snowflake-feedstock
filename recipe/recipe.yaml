@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-snowflake
-  version: "6.9.0"
+  version: 6.9.0
 
 package:
   name: ${{ name|lower }}
@@ -34,7 +34,6 @@ requirements:
     # more restrictive for python >=3.12
     - snowflake-snowpark-python >=1.27.0,<9999
     - setuptools >=80.0.0,<9999
-
 tests:
   - python:
       imports:
