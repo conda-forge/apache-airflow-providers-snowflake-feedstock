@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-snowflake
-  version: 6.9.0
+  version: 6.9.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_snowflake-${{ version }}.tar.gz
-  sha256: 7b7047116832fbbd29c14129f42528d58dc37cafb061e34e1b009fad77cfd4e9
+  sha256: 4108a2f2fbed1abd4a7c810d6795e9f9e405fd2a7b712cf18b2d47bedd30cdf2
 
 build:
   noarch: python
