@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-snowflake
-  version: 6.9.1
+  version: "6.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_snowflake-${{ version }}.tar.gz
-  sha256: 4108a2f2fbed1abd4a7c810d6795e9f9e405fd2a7b712cf18b2d47bedd30cdf2
+  sha256: fe57c468b8af5c8ff73fbbad10f67b7e68e3d5a94eac0820a641c6a6a1d15172
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - apache-airflow-providers-common-sql >=1.27.5
+    - apache-airflow-providers-common-sql >=1.32.0
     # more restrictive for python >=3.13
     - pandas >=2.2.3
     # more restrictive for python >=3.13
@@ -34,6 +34,7 @@ requirements:
     # more restrictive for python >=3.12
     - snowflake-snowpark-python >=1.27.0,<9999
     - setuptools >=80.0.0,<9999
+
 tests:
   - python:
       imports:
