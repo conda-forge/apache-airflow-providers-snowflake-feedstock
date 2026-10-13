@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-snowflake
-  version: 6.18.0
+  version: 6.19.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_snowflake-${{ version }}.tar.gz
-  sha256: 2d6e4b23bc4cdafcebcafb54cd72ff1985d6dbc1528942cc8027d7f491fc99b4
+  sha256: e4f4b45f903afb084703056c408a0b554dfae76f41733167593e5210a273f0aa
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
