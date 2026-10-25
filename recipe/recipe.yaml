@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
-    - apache-airflow-providers-common-compat >=1.12.0
+    - apache-airflow-providers-common-compat >=1.23.0
     - apache-airflow-providers-common-sql >=1.32.0
     # tightest of upstream's floors (python >=3.14)
     - asgiref >=3.11.1
@@ -34,6 +34,7 @@ requirements:
     - pyopenssl >=22.1.0
     - snowflake-connector-python >=3.17.0
     - snowflake-sqlalchemy >=1.7.0
+    - sqlalchemy >=1.4.54,<2.1
     # tightest of upstream's floors (python >=3.12,<3.14)
     - snowflake-snowpark-python >=1.27.0,<9999
     - setuptools >=80.0.0,<9999
